@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+
+body {margin:0;background-color: rgb(221, 235, 248);}
+
+.icon-bar {
+ position: fixed;
+  width: 10%;
+  background-color: #555;
+  display: inline-block;
+  margin-left: 0.1%;
+  margin-top: 0.6%;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+/* Slideshow */
+*{box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-left: 15%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.h2_header{
+    display: inline-block; 
+    width: 30%;height: 0%;
+    margin-left: 40%;
+    
+}
+
+
+</style>
+</head>
+
+<body>
+    
+      
+    <div class="icon-bar">
+        <a class="active" href="#"><i class="fa fa-home"></i></a> 
+        <a href="#"><i class="fa fa-search"></i></a> 
+        <a href="#"><i class="fa fa-envelope"></i></a> 
+        <a href="#"><i class="fa fa-globe"></i></a>
+        <a href="#"><i class="fa fa-trash"></i></a>
+        <a href="#"><i class="fa "></i></a> 
+      </div>
+
+<h2 class="h2_header">Wecome To My Website</h2>
+
+<div class="slideshow-container">
+    <div class="mySlides1 active">
+      <img src="images/img1.jpg" width="1250" height="400">
+    </div>
+  
+    <div class="mySlides1">
+      <img src="images/2.jpg" width="1250" height="400">
+    </div>
+  
+    <div class="mySlides1">
+      <img src="images/3.jpg" width="1250" height="400">
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+  </div>
+  
+  
+  <script>
+  var slideIndex = [1,1];
+  var slideId = ["mySlides1", "mySlides2"]
+  showSlides(1, 0);
+  showSlides(1, 1);
+  
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+  
+  function showSlides(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}    
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    x[slideIndex[no]-1].style.display = "block";  
+  }
+
+  
+  </script>
+  
+<h2>Login</h2>
+<form action="/action_page.php">
+
+    <label for="uname">Username:</label><br>
+    <input type="email" name="" id="" value="email@email.com"><br>
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd"><br><br>
+    
+    <input type="submit" value="Submit">
+    <button type="button" onclick="alert('Data Cleared')">Clear</button>
+    
+  </form> 
+
+
+</body>
+</html> 
